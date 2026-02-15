@@ -12,7 +12,6 @@ import DocumentDetail from "./components/pages/DocumentDetail";
 import Flashcards from "./components/pages/FlashcardPages";
 import Flashcardlistpage from "./components/pages/Flashcards/Flashcardlistpage";
 import ProtectedRoute from "./components/pages/ProtectedAuth";
-import Dashboard from "./components/Dashboard/DashboardPage";
 import Quizzes from "./components/pages/Quizzes";
 import QuizDetail from "./components/pages/QuizDetail";
 import Profile from "./components/pages/Profile";
