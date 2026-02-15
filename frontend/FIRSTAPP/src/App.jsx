@@ -7,13 +7,16 @@ import RegisterPage from "./components/pages/auth/RegisterPage";
 import NotFoundPage from "./components/pages/auth/NotFoundPage";
 
 // Protected pages
-import DashboardPage from "./components/Dashboard/DashboardPage"; 
 import Documents from "./components/pages/Documents";
 import DocumentDetail from "./components/pages/DocumentDetail";
-import Flashcards from "./components/pages/Flashcards";
+import Flashcards from "./components/pages/FlashcardPages";
+import Flashcardlistpage from "./components/pages/Flashcards/Flashcardlistpage";
+import ProtectedRoute from "./components/pages/ProtectedAuth";
+import Dashboard from "./components/Dashboard/DashboardPage";
 import Quizzes from "./components/pages/Quizzes";
 import QuizDetail from "./components/pages/QuizDetail";
 import Profile from "./components/pages/Profile";
+import Flashcardlistpage from "./components/pages/Flashcards/Flashcardlistpage";
 
 const App = () => {
   const isAuthenticated = true; // Change to false to test login redirect
