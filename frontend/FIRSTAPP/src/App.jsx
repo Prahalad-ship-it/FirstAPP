@@ -1,11 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const APP = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const isAuthenticated = false; // Replace with actual authentication logic
+  const loading = false; // Replace with actual loading state
 
-export default APP
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+  return (
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route path="/login" element={<LoginPages />} />
+        <Route path="/RegisterPage" element={<RegisterPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default APP;
